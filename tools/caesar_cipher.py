@@ -4,32 +4,24 @@ init(autoreset=True)
 
 
 def encrypt(text, shift):
-
     result = ""
-
     for char in text:
-
         if char.isupper():
             result += chr((ord(char) - ord("A") + shift) % 26 + ord("A"))
-
         elif char.islower():
             result += chr((ord(char) - ord("a") + shift) % 26 + ord("a"))
-
         else:
             result += char
-
     return result
 
 
 def decrypt(text, shift):
-
     return encrypt(text, -shift)
 
 
 def caesar_cipher():
-
     print("\n" + Fore.CYAN + "=" * 45)
-    print(Fore.YELLOW + "             CAESAR CIPHER")
+    print(Fore.YELLOW + 'CAESAR CIPHER'.center(45))
     print(Fore.CYAN + "=" * 45)
 
     print(Fore.GREEN + "1. Encrypt text")
@@ -57,14 +49,12 @@ def caesar_cipher():
         return
 
     if choice == "1":
-
         result = encrypt(text, shift)
 
         print(Fore.GREEN + "\nEncrypted text:")
         print(Fore.GREEN + Style.BRIGHT + result)
 
     else:
-
         result = decrypt(text, shift)
 
         print(Fore.MAGENTA + "\nDecrypted text:")

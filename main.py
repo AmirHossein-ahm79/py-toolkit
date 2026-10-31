@@ -10,9 +10,7 @@ init(autoreset=True)
 
 def show_menu():
     print("\n" + Fore.BLUE + "=" * 40)
-
-    print(Fore.CYAN + Style.BRIGHT + "         PYTHON TOOLKIT")
-
+    print(Fore.CYAN + Style.BRIGHT + 'PYTHON TOOLKIT'.center(40))
     print(Fore.BLUE + "=" * 40)
 
     print("1. Search keyword in files")
@@ -27,25 +25,19 @@ def show_menu():
 def main():
     while True:
         show_menu()
-
         choice = input(Fore.YELLOW + "Choose an option: ")
 
         if choice == "1":
             search_in_files()
-
         elif choice == "2":
             caesar_cipher()
-
         elif choice == "3":
             website_checker()
-
         elif choice == "4":
             currency_tool()
-
         elif choice == "5":
             print(Fore.GREEN + "\nGoodbye!")
             break
-
         else:
             print(Fore.RED + "\nInvalid choice!")
 
